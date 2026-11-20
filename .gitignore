@@ -1,0 +1,4 @@
+# ----------------------- #
+# Remove the script that setup the env variables for AWS
+export.sh
+# ----------------------- #
