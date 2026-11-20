@@ -10,7 +10,7 @@ Resources:
           - Effect: "Allow"
             Pricipal:
               Service:
-                - "s3.amazonaws.com"
+                - "cloudformation.amazonaws.com"
             Actions:
               - "sts:AssumeRole"
   GithubRolePolicy:
