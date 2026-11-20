@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  GithubRole:
+    Type: "AWS:IAM::Role"
+    Properties:
+      Description: "IAM role for github to trigger cloudformation"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Pricipal:
+              Service:
+                - "s3.amazonaws.com"
+            Actions:
+              - "sts:AssumeRole"
+  GithubRolePolicy:
+    Type: "AWS:IAM::Policy"
+    Properties:
+      PolicyName: ""
+      PolicyDocument:
+        Version: 
+        Statement: 
+          - Effect: "Allow"
+            Action: ""
+            Resouce: ""
+      Roles:
+        - Ref: "GithubRole"
